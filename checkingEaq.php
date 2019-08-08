@@ -68,7 +68,7 @@ for ($i = 0; $i < sizeof($date)-1; $i++) {
         $eaq_measures[$i]["date"] = $date[$i];
         $eaq_measures[$i]["value"] = 4 - $counting_equal[$i];
     }
-    $i+=$counting_equal[$i];
+    $i+=$counting_equal[$i]-1;
 }
 
 $lesser = 0;
