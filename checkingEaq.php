@@ -10,14 +10,14 @@ date_default_timezone_set('America/Sao_Paulo');
     //     ["date" => "07/08/2019 09:00","value" => "0"]
     // ];
 
-$ftp_user = 'Sky';
-$ftp_pass = 'HC8b!j=w';
-$ftp_addr = '52.67.215.237';
+$ftp_user = 'user';
+$ftp_pass = 'pass';
+$ftp_addr = '0.0.0.0';
 
 include 'Net/SFTP.php';
 
-$sftp = new Net_SFTP('52.67.215.237');
-if (!$sftp->login('Sky', 'HC8b!j=w')) {
+$sftp = new Net_SFTP('0.0.0.0');
+if (!$sftp->login('user', 'pass')) {
     exit('Login Failed');
 }
 
@@ -198,8 +198,7 @@ foreach ($org_files['size'] as $key => $value) {
     //         $lesser++;
     //     }
     // }
-    // $connection = ssh2_connect('52.67.215.237', 22);
-    // ssh2_auth_password($connection, 'Sky', 'HC8b!j=w');
+    
 
     // $sftp = ssh2_sftp($connection);
 
@@ -208,7 +207,6 @@ foreach ($org_files['size'] as $key => $value) {
     // echo $sftp;
     // // chdir('/home/gabrieloliveira/development');
     // $eaq1 = shell_exec(sprintf('lftp'));
-    // $eaq2 = shell_exec(sprintf('lftp -c "set sftp:auto-confirm yes ; open -u Sky sftp://52.67.215.237'));
     // $eaq3 = shell_exec(sprintf('ls'));
 
     // $eaq = strval($eaq2);
